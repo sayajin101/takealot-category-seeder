@@ -6619,7 +6619,7 @@ class TakealotCategorySeeder extends Seeder
                     'sub_category' => $category['sub_category'],
                     'rate_type' => $category['rate_type'],
                     'rate_value' => $category['rate_value'],
-                    'rate_metadata' => $category['rate_metadata'],
+                    'rate_metadata' => isset($category['rate_metadata']) ? json_encode($category['rate_metadata']) : NULL,
                     'created_at' => $category['created_at'],
                 ]
             );
