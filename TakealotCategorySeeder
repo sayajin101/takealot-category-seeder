@@ -1516,8 +1516,20 @@ class TakealotCategorySeeder extends Seeder
                 "department" => "Clothing & Footwear",
                 "category" => "Jewellery and Watches",
                 "sub_category" => "Jewellery",
-                "rate_type" => "flat",
-                "rate_value" => 123,
+                "rate_type" => "dynamic",
+                "rate_value" => NULL,
+                "rate_metadata" => [
+                    [
+                        "min_price" => 0,
+                        "max_price" => 950,
+                        "rate_value" => 18,
+                    ],
+                    [
+                        "min_price" => 951,
+                        "max_price" => 999999999,
+                        "rate_value" => 10,
+                    ],
+                ],
                 "created_at" => Carbon::now(),
             ],
             [
